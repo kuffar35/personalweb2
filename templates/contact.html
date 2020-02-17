@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+
+    
+<div class="contactCV">
+    <label class="dblbl">Contact</label>
+    {% if cInformation %}
+    {% for cInformation in cInformation %}
+    <tr>
+   
+     <label class="dblbl">{{cInformation.contactHeader}}  ---  <a href="{{cInformation.contactName}}">{{cInformation.contactName}}</a></label>
+    
+
+    {% endfor %}  
+  
+</tbody>
+</table>
+{% else %}
+henüz kayıt bulunmuyor
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,284 @@
+{% extends "controlPanel/control_layout.html" %}
+
+
+{% block body %}
+
+
+    
+               <div class="personalInformation">
+                     personalInformation
+                     {% if pInformation %}
+                     <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">lastname</th>
+                            <th scope="col">adress</th>
+                            <th scope="col">phone</th>
+                            <th scope="col">mail</th>
+                            <th scope="col">drivinglicence</th>
+                            <th scope="col">bloodgroup</th>
+                            <th scope="col">---</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for pInformation in pInformation %}
+                            <tr>
+                                <th scope="row">{{pInformation.InformationId}}</th>
+                             <th scope="row">{{pInformation.name}}</th>
+                             <th scope="row">{{pInformation.lastname}}</th>
+                             <th scope="row">{{pInformation.adress}}</th>
+                             <th scope="row">{{pInformation.phone}}</th>
+                             <th scope="row">{{pInformation.mail}}</th>
+                             <th scope="row">{{pInformation.drivinglicence}}</th>
+                             <th scope="row">{{pInformation.bloodgroup}}</th>
+                              <td></td>
+                              <td></td>
+                        
+                              <td><a href="/InformationUpdate/{{pInformation.InformationId}}" class="buttonControl">Update</a></td>
+                              
+                            {% endfor %}  
+                          
+                        </tbody>
+                      </table>
+                     {% else %}
+                     henüz kayıt bulunmuyor
+                     {% endif %}
+                     
+                     
+               </div>
+               <div class="about">
+                     about
+                     {% if aInformation %}
+                     <table class="table">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">about</th>
+                            <th scope="col">about</th>
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for aInformation in aInformation %}
+                            <tr>
+                             <th scope="row">{{aInformation.aboutId}}</th>
+                             <th scope="row">{{aInformation.aboutInformation}}</th>
+                            
+                              <td></td>
+                              <td></td>
+                              
+                              <td><a href="/aboutUpdate/{{aInformation.aboutId}}" class="buttonControl">Update</a></td>
+                              
+                            {% endfor %}  
+                          
+                        </tbody>
+                      </table>
+                     {% else %}
+                     henüz kayıt bulunmuyor
+                     {% endif %}
+               </div>
+               <div class="education">
+                     education
+                     {% if eInformation %}
+                     <table class="table">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">id</th>
+                            <th scope="col">first</th>
+                            <th scope="col">second</th>
+                            <th scope="col">üniversty</th>
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for eInformation in eInformation %}
+                            <tr>
+                             <th scope="row">{{eInformation.educationId}}</th>
+                             <th scope="row">{{eInformation.firstEducation}}</th>
+                             <th scope="row">{{eInformation.secondEducation}}</th>
+                             <th scope="row">{{eInformation.universityEducation}}</th>
+                            
+                              <td></td>
+                              <td></td>
+                        
+                              <td><a href="" class="buttonControl">Update</a></td>
+                              <td><a href="" class="buttonControl">Delete</a></td> 
+                              <td><a href="" class="buttonControl">add</a></td> 
+                            {% endfor %}  
+                          
+                        </tbody>
+                      </table>
+                     {% else %}
+                     henüz kayıt bulunmuyor
+                     {% endif %}
+                     
+               </div>
+               <div class="certificate">
+                     certificate
+                     {% if cInformation %}
+                     <table class="table">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">id</th>
+                            <th scope="col">certificateName</th>
+                            <th scope="col">certificateTime</th>
+                            
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for cInformation in cInformation %}
+                            <tr>
+                             <th scope="row">{{cInformation.certificateId}}</th>
+                             <th scope="row">{{cInformation.certificateName}}</th>
+                             <th scope="row">{{cInformation.certificateTime}}</th>
+                            
+                            
+                              <td></td>
+                              <td></td>
+                        
+                              <td><a href="/updateCertificate/{{cInformation.certificateId}}" class="buttonControl">Update</a></td>
+                              <td><a href="/delCertificate/{{cInformation.certificateId}}" class="buttonControl">Delete</a></td> 
+                             
+                            {% endfor %}  
+                          
+                        </tbody>
+                      </table>
+                     {% else %}
+                     henüz kayıt bulunmuyor
+                     {% endif %}
+                     <td><a href="/addCertificate" class="buttonControl">add</a></td> 
+               </div>
+               <div class="ability">
+                     ability
+                     {% if abilityInformation %}
+                     <table class="table">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">id</th>
+                            <th scope="col">abiltyName</th>
+                            <th scope="col">abiltyLevel</th>
+                            
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for abilityInformation in abilityInformation %}
+                            <tr>
+                             <th scope="row">{{abilityInformation.abiltyId}}</th>
+                             <th scope="row">{{abilityInformation.abiltyName}}</th>
+                             <th scope="row">{{abilityInformation.abiltyLevel}}</th>
+                            
+                            
+                              <td></td>
+                              <td></td>
+                        
+                              <td><a href="/updateAbility/{{abilityInformation.abiltyId}}" class="buttonControl">Update</a></td>
+                              <td><a href="/delAbility/{{abilityInformation.abiltyId}}" class="buttonControl">Delete</a></td> 
+                              
+                            {% endfor %}  
+                          
+                        </tbody>
+                      </table>
+                     {% else %}
+                     henüz kayıt bulunmuyor
+                     {% endif %}
+                     <td><a href="/addAbility" class="buttonControl">add</a></td> 
+               </div>
+               <div class="language">
+                     language
+                     {% if lInformation %}
+                     <table class="table">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">id</th>
+                            <th scope="col">languageName</th>
+                            <th scope="col">languageLevel</th>
+                            
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for lInformation in lInformation %}
+                            <tr>
+                             <th scope="row">{{lInformation.languageId}}</th>
+                             <th scope="row">{{lInformation.languageName}}</th>
+                             <th scope="row">{{lInformation.languageLevel}}</th>
+                            
+                            
+                              <td></td>
+                              <td></td>
+                        
+                              <td><a href="/updateLanguage/{{lInformation.languageId}}" class="buttonControl">Update</a></td>
+                              <td><a href="/dellanguage/{{lInformation.languageId}}" class="buttonControl">Delete</a></td> 
+                              
+                            {% endfor %}  
+                          
+                        </tbody>
+                      </table>
+                     {% else %}
+                     henüz kayıt bulunmuyor
+                     {% endif %}
+                     <td><a href="/addlanguage" class="buttonControl">add</a></td>     
+               </div>
+               <div class="hobby">
+                     hobby
+                     {% if hInformation %}
+                     <table class="table">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">id</th>
+                            <th scope="col">hobbyName</th>
+                            
+                            
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                            {% for hInformation in hInformation %}
+                            <tr>
+                             <th scope="row">{{hInformation.hobbyId}}</th>
+                             <th scope="row">{{hInformation.hobbyName}}</th>
+                             
+                            
+                            
+                              <td></td>
+                              <td></td>
+                        
+                              <td><a href="/updatehobby/{{hInformation.hobbyId}}" class="buttonControl">Update</a></td>
+                              <td><a href="/deletehobby/{{hInformation.hobbyId}}" class="buttonControl">Delete</a></td> 
+                             
+                            {% endfor %}  
+                          
+                        </tbody>
+                      </table>
+                     {% else %}
+                     henüz kayıt bulunmuyor
+                     {% endif %}
+                     <td><a href="/addhobby" class="buttonControl">add</a></td> 
+                     
+               </div>
+
+               
+
+{% endblock %}

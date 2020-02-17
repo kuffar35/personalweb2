@@ -1,0 +1,22 @@
+{% extends "controlPanel/control_layout.html" %}
+
+{% block body %}
+{% from "controlPanel/formhelpers.html" import render_field %}<br>
+
+
+    
+    
+
+    
+    <form method ="post">
+
+        {{render_field(form.contactHeader,class="form-control")}}
+        {{render_field(form.contactName,class="form-control")}}
+
+        <button  class="btn btn-info" type="submit">ADD CONTACT</button>
+
+
+
+   
+     </form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "controlPanel/control_layout.html" %}
+
+{% block body %}
+{% from "controlPanel/formhelpers.html" import render_field %}<br>
+
+<form method="post">
+    
+    
+    {{ render_field(form.name,class="form-control") }}
+    {{ render_field(form.lastname,class="form-control") }}
+    {{ render_field(form.adress,class="form-control") }}
+    {{ render_field(form.phone,class="form-control") }}
+    {{ render_field(form.mail,class="form-control") }}
+    {{ render_field(form.drivinglicence,class="form-control") }}
+    {{ render_field(form.bloodgroup,class="form-control") }}
+    
+    
+    <button  class="btn btn-info" type="submit">update</button>
+   
+   
+</form>
+{% endblock %}

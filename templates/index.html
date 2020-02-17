@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+
+    <div class="personalInformationCV">
+        {% if pInformation %}
+        {% for pInformation in pInformation %}
+        <tr>
+         <label class="lblCv">Name : </label>   
+         <label class="dblbl">{{pInformation.name}}</label>
+         <label class="lblCv">Last Name : </label>   
+         <label class="dblbl">{{pInformation.lastname}}</label>
+         <label class="lblCv">Adress : </label>   
+         <label class="dblbl">{{pInformation.adress}}</label>
+         <label class="lblCv">Phone : </label>   
+         <label class="dblbl">{{pInformation.phone}}</label>
+         <label class="lblCv">Mail : </label>   
+         <label class="dblbl">{{pInformation.mail}}</label>
+         <label class="lblCv">Driving Licence : </label>   
+         <label class="dblbl">{{pInformation.drivinglicence}}</label>
+         <label class="lblCv">Blood Group : </label>   
+         <label class="dblbl">{{pInformation.bloodgroup}}</label>
+        
+        {% endfor %}  
+      
+    </tbody>
+  </table>
+ {% else %}
+ henüz kayıt bulunmuyor
+ {% endif %}
+    </div>
+
+
+    <div class="aboutCV">
+        {% if aInformation %}
+        {% for aInformation in aInformation %}
+        <tr>
+          
+         <label class="dblbl">{{aInformation.aboutInformation}}</label>
+        
+        {% endfor %}  
+      
+    </tbody>
+  </table>
+ {% else %}
+ henüz kayıt bulunmuyor
+ {% endif %}
+    </div>
+    <div class="educationCV">
+        {% if eInformation %}
+        {% for eInformation in eInformation %}
+        <tr>
+         <label class="lblCv">First Education : </label>  
+         <label class="dblbl">{{eInformation.firstEducation}}</label>
+         <label class="lblCv">Second Education : : </label>  
+         <label class="dblbl">{{eInformation.secondEducation}}</label>
+         <label class="lblCv">University Education : </label>  
+         <label class="dblbl">{{eInformation.universityEducation}}</label>
+        
+        {% endfor %}  
+      
+    </tbody>
+  </table>
+ {% else %}
+ henüz kayıt bulunmuyor
+ {% endif %}
+    </div>
+    <div class="certificateCV">
+        <label class="dblbl">CERTIFICATES</label>
+        {% if cInformation %}
+        {% for cInformation in cInformation %}
+        <tr>
+       
+         <label class="dblbl">{{cInformation.certificateName}} ---- {{cInformation.certificateTime}}</label>
+
+        {% endfor %}  
+      
+    </tbody>
+  </table>
+ {% else %}
+ henüz kayıt bulunmuyor
+ {% endif %}
+
+    </div>
+    <div class="abilityCV">
+        <label class="dblbl">ABILITY</label>
+        {% if abilityInformation %}
+        {% for abilityInformation in abilityInformation %}
+        <tr>
+       
+         <label class="dblbl">{{abilityInformation.abiltyName}}  ---  {{abilityInformation.abiltyLevel}}</label>
+
+        {% endfor %}  
+      
+    </tbody>
+  </table>
+ {% else %}
+ henüz kayıt bulunmuyor
+ {% endif %}
+    </div>
+    <div class="languageCV">
+        <label class="dblbl">LANGUAGE</label>
+        {% if lInformation %}
+        {% for lInformation in lInformation %}
+        <tr>
+       
+         <label class="dblbl">{{lInformation.languageName}}  ---  {{lInformation.languageLevel}}</label>
+
+        {% endfor %}  
+      
+    </tbody>
+  </table>
+ {% else %}
+ henüz kayıt bulunmuyor
+ {% endif %}
+    </div>
+    <div class="hobbyCV">
+        <label class="dblbl">HOBBY</label>
+        {% if hInformation %}
+        {% for hInformation in hInformation %}
+        <tr>
+       
+         <label class="dblbl">{{hInformation.hobbyName}} </label>
+
+        {% endfor %}  
+      
+    </tbody>
+  </table>
+ {% else %}
+ henüz kayıt bulunmuyor
+ {% endif %}
+    </div>
+            
+
+{% endblock %}

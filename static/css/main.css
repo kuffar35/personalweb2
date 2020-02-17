@@ -1,0 +1,337 @@
+body{
+    background-color: #fff;
+    font-family: Open Sans,sans-serif;
+}
+*{
+    padding: 0;
+    border: 0;
+    margin:0;
+    list-style:none;
+}
+a{
+text-decoration: none;
+color:black;
+}
+.navbar{
+    
+    width: 250px;
+    height: 450px;
+  
+    margin-top: 50px;
+}
+
+
+.navbar .navbar-link{
+    
+    margin-left: 10px;
+    width: 30px;
+    height: 450px;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+
+    
+}
+
+.navbar .navbar-link ul li a{
+    float: right;
+    margin-top: 25px;
+    width: 0px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color:#990000;
+    transition-duration: 3s;
+    opacity: 0;
+    transition: 100ms all;
+    border-bottom: 1px solid #000;
+}
+
+.navbar .navbar-link:hover {
+    width: 250px;
+    transition-duration: 3s;
+ 
+
+}
+.navbar .navbar-link:hover ul li a{
+    border-bottom-left-radius: 10px;
+    width: 150px;
+    transition-duration: 3s;
+    opacity: 1;
+    
+
+}
+
+.container{
+    float: left;
+    width: 1200px;
+    height: auto;
+    margin-top: -450px;
+    margin-left: 300px;
+    border: 1px solid #E9E9E9;
+    border-radius: 20px;
+}
+
+.containerControl{
+    float: left;
+    width: 1200px;
+    height: auto;
+    margin-top: -450px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    border: 1px solid #E9E9E9;
+    border-radius: 20px;
+}
+
+.lbl{
+    
+    width: 250px;
+    height: 30px;
+    transform: rotate(-90deg);
+    margin-left: -105px;
+    margin-top: 75px;
+
+
+}
+
+.contolPanel{
+    float: left;
+    width: 450px;
+    height: 450px;
+    
+    margin-top: 150px;
+    margin-left: 500px;
+}
+.contolPanel .controlPanelHeader{
+    float: left;
+    width:450px;
+    height: 49px;
+    background-color:#E9E9E9;
+    border-bottom: 1px solid #d5d5d5;
+    text-align: center;
+    line-height: 49px;
+}
+.contolPanel .controlPanelOperation{
+    float: left;
+    width: 450px;
+    height: 290px;
+    background-color:#E9E9E9;
+    margin-top: 20px;
+}
+
+.txt{
+    float: left;
+    width: 250px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-color: #fff;
+}
+.lbllogin{
+    float: left;
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 40px;    
+}
+.button{
+    float: left;
+    width: 75px;
+    height: 35px;
+    margin-top: 50px;
+    margin-left: 200px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.button:hover{
+    background-color: antiquewhite;
+}
+.buttonControl{
+    float: right;
+    width: 75px;
+    height: 35px;
+    margin-top: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 15px;
+}
+.buttonControl:hover{
+    background-color: antiquewhite;
+}
+
+.personalInformation{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.about{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.education{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.certificate{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.ability{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.language{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.hobby{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.contactInformation{
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+}
+.projectInformation{
+
+    float: left;
+    width: 900px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top:1px solid #d5d5d5;
+    font-size: 12px;
+
+}
+.lblCv{
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    
+}
+.projectdblbl{
+    width: 750px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    margin-left: 25px;
+    padding-left: 15px;
+   
+}
+.projectdblbl:hover{
+background-color: #d5d5d5;
+}
+.dblbl{
+    width: 750px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    margin-left: 25px;
+    padding-left: 15px;
+   
+}
+.personalInformationCV{
+    float: left;
+    width: 1000px;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.aboutCV{
+    float: left;
+    width: 1000px;
+    height: 150px;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.educationCV{
+    float: left;
+    width: 1000px;
+    height: 150px;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.certificateCV{
+    float: left;
+    width: 1000px;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.abilityCV{
+    float: left;
+    width: 1000px;
+    height:auto;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.languageCV{
+    float: left;
+    width: 1000px;
+    height: 150px;
+    margin-left: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.hobbyCV{
+    float: left;
+    width: 1000px;
+    height: 150px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.contactCV{
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+}

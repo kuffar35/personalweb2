@@ -1,0 +1,22 @@
+{% extends "controlPanel/control_layout.html" %}
+
+{% block body %}
+{% from "controlPanel/formhelpers.html" import render_field %}<br>
+
+
+    
+    
+
+    
+    <form method ="post">
+
+        {{render_field(form.abiltyName,class="form-control")}}
+        {{render_field(form.abiltyLevel,class="form-control")}}
+
+        <button  class="btn btn-info" type="submit">ADD PROJECT</button>
+
+
+
+   
+     </form>
+{% endblock %}

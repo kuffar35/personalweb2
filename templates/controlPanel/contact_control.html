@@ -1,0 +1,44 @@
+{% extends "controlPanel/control_layout.html" %}
+
+
+{% block body %}
+
+<div class="contactInformation">
+    
+    {% if cInformation %}
+    <table class="table">
+       <thead>
+         <tr>
+           <th scope="col">id</th>
+           <th scope="col">header</th>
+           <th scope="col">name</th>
+           
+          
+         </tr>
+       </thead>
+       <tbody>
+           
+           {% for cInformation in cInformation %}
+           <tr>
+               <th scope="row">{{cInformation.contactId}}</th>
+            <th scope="row">{{cInformation.contactHeader}}</th>
+            <th scope="row">{{cInformation.contactName}}</th>
+            </th>
+             <td></td>
+             <td></td>
+       
+             <td><a href="/updateContact/{{cInformation.contactId}}" class="buttonControl">Update</a></td>
+             <td><a href="/deleteContact/{{cInformation.contactId}}" class="buttonControl">delete</a></td>
+             
+           {% endfor %}  
+         
+       </tbody>
+     </table>
+    {% else %}
+    henüz kayıt bulunmuyor
+    {% endif %}
+    
+    <td><a href="/addControl" class="buttonControl">add</a></td>
+</div>
+
+{% endblock %}

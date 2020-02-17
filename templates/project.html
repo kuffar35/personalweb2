@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+
+    
+<div class="projectCV">
+    <label class="dblbl">Projects</label>
+    {% if pInformation %}
+    {% for pInformation in pInformation %}
+    <tr>
+   
+     <label class="projectdblbl"><a href="{{pInformation.projectUrl}}">{{pInformation.projectName}} </a></label>
+    
+
+    {% endfor %}  
+  
+</tbody>
+</table>
+{% else %}
+henüz kayıt bulunmuyor
+{% endif %}
+</div>
+
+{% endblock %}
